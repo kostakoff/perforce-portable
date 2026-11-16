@@ -11,7 +11,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-DEST="$SCRIPT_DIR/helix-core-server-mac"
+DEST="$SCRIPT_DIR"
 URL="https://filehost.perforce.com/perforce/r26.1/bin.macosx12arm64/helix-core-server.tgz"
 TMP_DIR=$(mktemp -d)
 
@@ -26,7 +26,7 @@ tar -xzf "$TMP_DIR/helix-core-server.tgz" -C "$TMP_DIR"
 for bin in p4 p4d p4p p4broker; do
     src=$(find "$TMP_DIR" -name "$bin" -type f | head -1)
     if [ -n "$src" ]; then
-        cp "$src" "$DEST/$bin"
+        cp -f "$src" "$DEST/$bin"
         chmod +x "$DEST/$bin"
         echo "  Installed: $bin"
     else

@@ -43,6 +43,7 @@ The server binds to `0.0.0.0:1666`. Projects on your machine connect to `127.0.0
 ### 1. Get the binaries
 
 ```bash
+cd helix-core-server-mac
 ./download.sh
 ```
 
@@ -51,7 +52,6 @@ Downloads the official Helix Core Server package and installs `p4`, `p4d`, `p4p`
 ### 2. Initialize the server
 
 ```bash
-cd helix-core-server-mac
 ./setup-p4d.sh
 ```
 
@@ -77,6 +77,7 @@ Add `helix-core-server-mac` to your `PATH` so `p4` is available from anywhere:
 
 ```bash
 export PATH="/Volumes/p4server/helix-core-server-mac:$PATH"
+export P4CONFIG="/Volumes/p4server/.p4config"
 ```
 
 Copy `.p4config` to your project root and activate it:
