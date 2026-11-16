@@ -1,0 +1,21 @@
+# Perforce server binaries (fetched by download.sh)
+helix-core-server-mac/p4
+helix-core-server-mac/p4d
+helix-core-server-mac/p4p
+helix-core-server-mac/p4broker
+
+# Runtime data (keep directory structure visible)
+root/*
+journals/*
+logs/*
+archives/*
+!root/.gitkeep
+!journals/.gitkeep
+!logs/.gitkeep
+!archives/.gitkeep
+
+# Client config (contains credentials)
+.p4config
+
+# macOS
+.DS_Store
